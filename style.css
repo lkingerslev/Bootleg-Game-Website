@@ -1,0 +1,376 @@
+@charset "UTF-8";
+:root {
+  --bs-blue: #0d6efd;
+  --bs-indigo: #6610f2;
+  --bs-purple: #6f42c1;
+  --bs-pink: #d63384;
+  --bs-red: #dc3545;
+  --bs-orange: #fd7e14;
+  --bs-yellow: #ffc107;
+  --bs-green: #198754;
+  --bs-teal: #20c997;
+  --bs-cyan: #0dcaf0;
+  --bs-white: #fff;
+  --bs-gray: #40607d;
+  --bs-gray-dark: #343a40;
+  --bs-gray-100: #f8f9fa;
+  --bs-gray-200: #e9ecef;
+  --bs-gray-300: #dee2e6;
+  --bs-gray-400: #ced4da;
+  --bs-gray-500: #adb5bd;
+  --bs-gray-600: #6c757d;
+  --bs-gray-700: #495057;
+  --bs-gray-800: #343a40;
+  --bs-gray-900: #212529;
+  --bs-primary: #0d6efd;
+  --bs-secondary: #6c757d;
+  --bs-success: #198754;
+  --bs-info: #0dcaf0;
+  --bs-warning: #ffc107;
+  --bs-danger: #dc3545;
+  --bs-light: #f8f9fa;
+  --bs-dark: #000000;
+  --bs-primary-rgb: 13, 110, 253;
+  --bs-secondary-rgb: 108, 117, 125;
+  --bs-success-rgb: 25, 135, 84;
+  --bs-info-rgb: 13, 202, 240;
+  --bs-warning-rgb: 255, 193, 7;
+  --bs-danger-rgb: 220, 53, 69;
+  --bs-light-rgb: 248, 249, 250;
+  --bs-dark-rgb: 33, 37, 41;
+  --bs-white-rgb: 255, 255, 255;
+  --bs-black-rgb: 0, 0, 0;
+  --bs-body-rgb: 33, 37, 41;
+  --bs-font-sans-serif: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  --bs-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
+  --bs-body-font-family: var(--bs-font-sans-serif);
+  --bs-body-font-size: 1rem;
+  --bs-body-font-weight: 400;
+  --bs-body-line-height: 1.5;
+  --bs-body-color: #212529;
+  --bs-body-bg: #fff;
+}
+
+html, body, header{
+  height: 100%;
+}
+nav{
+  height: 10%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+#top{
+  background-color:black;
+  color: white;
+  height: 10%;
+}
+#top>h1{
+  padding-top: 0.5%;
+}
+#bottom{
+  background-color: white;
+  border-radius: 0px 0px 25px 25px;
+  box-shadow: 0px 10px 10px black;
+  height: 10%;
+  position: sticky;
+  top: 0px;
+  z-index: 2;
+}
+#logo{
+  height: 100%;
+  width: auto;
+}
+#secondBarPic{
+  height:60%;
+  width:auto;
+}
+.cart{
+  margin-top: 30%;
+}
+.dropdownArea, h1{
+  margin-top: auto;
+  margin-bottom: auto;
+}
+.dropdownButton{
+  font-size: 190%;
+}
+#top>.dropdownButton, #top>div>.dropdownButton, .prev, .next, .active, .dot:hover, #appDownload, footer, #pageWithContact, #submit {
+  background-color: black;
+  color:white;
+}
+#bottom>.dropdownButton, #bottom>div>.dropdownButton{
+  background-color: white;
+}
+#dropArrow{
+  height: 15px;
+  width: auto;
+}
+.dropdownContent>button{
+  display: block;
+  margin-top: 5%;
+  background-color: rgb(33, 37, 41);
+}
+button>a{
+  color: white;
+}
+.text-light:hover{
+  text-decoration: underline;
+}
+#searchBar{
+  margin-top: 1%;
+}
+#searchBar>a, button>a, .prev, .next, .contact>a{
+  text-decoration: none;
+}
+.searchBar, .slideshow-container>img, .dot, #appDownload, .downloadButton, #appDownload>img, #form, input, textarea{
+  border-radius: 15px;
+}
+video{
+  position: relative;
+  top: -20px;
+}
+main>h1{
+  color:white;
+  position: absolute;
+  top: 50%;
+  font-size: 100px;
+  margin: 5%;
+  text-shadow: 10px 10px 10px black;
+}
+main>h2{
+  margin: 5%;
+  font-size: 50px;
+}
+.slideshow-container {
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;  
+  margin: 5%;
+  align-items: center;
+}
+html, body, header, .slideshow-container>img, .dotContainer, video{
+  width: 100%;
+}
+#tall{
+  height: 450px;
+}
+.dotContainer{
+  position: absolute;
+  margin: -10% auto 0px auto;
+}
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  padding: 16px;
+  margin-top: -22px;
+  font-weight: bold;
+  font-size: 18px;
+  border-radius: 10px;
+}
+.next {
+  right: 0;
+}
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 5%;
+  margin: 0 1%;
+  background-color: #bbb;
+  transition: background-color 0.6s ease;
+}
+.fade {
+  animation-name: fade;
+  animation-duration: 1s;
+  animation-fill-mode: both;
+}
+@keyframes fade {
+  from {opacity: 0.5}
+  to {opacity: 1}
+}
+#appDownload{
+  margin: 2% 10%;
+  height: 250px;
+  padding: 1%;
+}
+.title>#logo{
+  height:150%;
+}
+.title{
+  display: flex;
+  flex-direction: row;
+  height: 25%;
+}
+.sideStuff, footer, #form{
+  padding: 2%;
+}
+.sideStuff>h2, li{
+  padding-bottom: 2%;
+}
+.downloadButton{
+  background-color: white;
+  height: 50px;
+  font-weight: bold;
+}
+#appDownload>img{
+  width: 25%;
+  float: right;
+  padding: 1%;
+}
+footer, #welcome>p, button>a{
+  font-size: 25px;
+}
+.contact, .dot{
+  display: inline-block;
+}
+.contact>a>img{
+  width: 5%;
+  margin: 0% 5% 2% 5%;
+}
+#welcome{
+  margin-bottom: 5%;
+}
+#welcome>h2, #jobs>h2{
+  font-size: 100px;
+}
+#welcome>hr{
+  width: 50%;
+  margin: auto;
+  border: 5px solid black;
+}
+#welcome>h2, #jobs>h2, #welcome>p {
+  margin-top: 2%;
+}
+#pageWithContact, #welcome, #welcome>h2, #jobs>h2, #form, input, textarea, .dotContainer, footer{
+  text-align: center;
+}
+ul{
+  font-size: 25px;
+  margin-left: 40%;
+}
+#form{
+  background-color: lightgrey;
+  margin: 5% 10%;
+  padding-left: 5%;
+  color: black;
+}
+.dropdownContent>button, .dropdownButton, .downloadButton, input, textarea{
+  border: 0px;
+}
+#submit{
+  margin: 2% 0 0 45%;
+  padding: 0.5% 1%;
+}
+#helpContact>a>img{
+  width: 10%;
+  margin: 0% 5% 2% 5%;
+}
+#small{
+  width: 10%;
+  margin: auto;
+  border: 5px solid black;
+}
+#featuredTitle, #popularTitle, #upcomingTitle{
+  font-size: 75px;
+}
+#featuredGameSlideShow, #popularGameSlideShow, #upcomingGameSlideShow{
+  overflow: hidden;
+  white-space:nowrap;
+  align-items: left;
+}
+#featuredGameSlideShow>img, #popularGameSlideShow>img, #upcomingGameSlideShow>img{
+  width: 33%;
+}
+#prevFeaturedGameButton, #nextFeaturedGameButton{
+  margin: 23% 2%;
+}
+ #prevPopularGameButton, #nextPopularGameButton{
+   margin: 65% 2%;
+ }
+#prevUpcomingGameButton, #nextUpcomingGameButton{
+  margin: 90% 2%;
+}
+/* x small */
+@media only screen and (max-width: 575.98px) {
+  #secondBarPic{
+    height: 10%;
+  }
+  ul{
+    margin-left: 30%;
+  }
+}
+/* small */
+@media (min-width: 576px) and (max-width: 767.98px) { 
+  #secondBarPic{
+    height: 20%;
+  }
+  ul{
+    margin-left: 35%;
+  }
+}
+/* medium */
+@media (min-width: 568px) and (max-width: 991.98px) { 
+  main>h1{
+    font-size: 75px;
+    top: 40%;
+  }
+  #secondBarPic{
+    height: 30%;
+  }
+  .searchBar{
+    height: 50%;
+  }
+  ul{
+    font-size: 50px;
+    margin-left: 40%;
+  }
+  .contact>a>img, #helpContact>a>img{
+    width: 10%;
+  }
+  #prevFeaturedGameButton, #nextFeaturedGameButton{
+    margin: -10% 2%;
+  }
+  #prevPopularGameButton, #nextPopularGameButton{
+    margin: 35% 2%;
+  }
+  #prevUpcomingGameButton, #nextUpcomingGameButton{
+    margin: 80% 2%;
+  }
+}
+/* large */
+@media (min-width: 992px) and (max-width: 1199.98px) { 
+  ul{
+    font-size: 50px;
+    margin-left: 40%;
+  }
+  .contact>a>img, #helpContact>a>img{
+    width: 10%;
+  }
+}
+/* xl */
+@media (min-width: 1200px) and (max-width: 1399.98px) {
+  #appDownload>img{
+    width: 30%;
+  }
+  ul{
+    font-size: 50px;
+    margin-left: 40%;
+  }
+  .contact>a>img {
+    width: 5%;
+  }
+  #helpContact>a>img {
+    width: 10%;
+  }
+  #prevFeaturedGameButton, #nextFeaturedGameButton{
+    margin: 20% 2%;
+  }
+  #prevUpcomingGameButton, #nextUpcomingGameButton{
+    margin: 105% 2%;
+  }
+  #welcome>p{
+    font-size: 50px;
+  }
+}
